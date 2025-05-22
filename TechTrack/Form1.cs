@@ -157,6 +157,13 @@ namespace TechTrack
 
         private void button4_Click(object sender, EventArgs e)
         {
+            RemoveEqipment RemoveForm = new RemoveEqipment();
+            RemoveForm.FormClosed += (s, args) => LoadAllData();
+            RemoveForm.ShowDialog();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

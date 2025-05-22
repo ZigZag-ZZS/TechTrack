@@ -110,5 +110,10 @@ namespace TechTrack
         {
             
         }
+
+        private void AddEqipment_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
