@@ -118,5 +118,10 @@ namespace TechTrack
         {
             // Здесь можешь добавить нужную логику
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
