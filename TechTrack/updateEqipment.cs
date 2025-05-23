@@ -111,12 +111,12 @@ namespace TechTrack
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Hide(); // Закрытие окна без выхода из программы
+            this.Hide(); 
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            // Здесь можешь добавить нужную логику
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

@@ -18,7 +18,7 @@ namespace TechTrack
         {
             InitializeComponent();
             comboBox1.Items.AddRange(new[] { "Компьютер", "Мышка", "Клавиатура", "Принтер" });
-            comboBox2.Items.AddRange(new[] { "Каб. 101", "Каб. 102", "Каб. 103" }); // пример
+            comboBox2.Items.AddRange(new[] { "Каб. 101", "Каб. 102", "Каб. 103" }); 
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -50,9 +50,9 @@ namespace TechTrack
 
                 data.Add(newItem);
                 string json = JsonConvert.SerializeObject(data, Formatting.Indented);
-                File.WriteAllText(path, json); // Сохраняем в bin\Debug
+                File.WriteAllText(path, json);
 
-                // Копируем обновленный файл обратно в корневую папку проекта
+               
                 File.Copy(path, projectPath, true);
 
                 MessageBox.Show("Устройство добавлено!");
@@ -84,7 +84,7 @@ namespace TechTrack
 
         private string GetPathByType(string type)
         {
-            string basePath = AppDomain.CurrentDomain.BaseDirectory; // Путь к папке bin\Debug или bin\Release
+            string basePath = AppDomain.CurrentDomain.BaseDirectory;
             string path = "";
 
             if (type == "Компьютер")

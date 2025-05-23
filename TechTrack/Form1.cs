@@ -32,7 +32,7 @@ namespace TechTrack
             {
                 if (!File.Exists(path))
                 {
-                    File.WriteAllText(path, "[]"); // Создаем пустой массив, если файл не существует
+                    File.WriteAllText(path, "[]");
                     return new List<Equipment>();
                 }
 
@@ -92,45 +92,33 @@ namespace TechTrack
 
         void StylizeDataGridView(DataGridView dgv)
         {
-            // Цвет фона таблицы
             dgv.BackgroundColor = Color.White;
 
-            // Цвет фона строк
             dgv.RowsDefaultCellStyle.BackColor = Color.White;
             dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(240, 240, 240);
 
-            // Цвет текста
             dgv.DefaultCellStyle.ForeColor = Color.Black;
 
-            // Центрирование текста
             dgv.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            // Центрирование заголовков и их стиль
             dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.Green;
             dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dgv.EnableHeadersVisualStyles = false;
 
-            // Высота строк
             dgv.RowTemplate.Height = 35;
 
-            // Автоматическое изменение ширины колонок
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            // Убрать рамку ячеек
             dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
 
-            // Убрать рамку вокруг таблицы
             dgv.BorderStyle = BorderStyle.None;
 
-            // Отключить редактирование напрямую
             dgv.ReadOnly = true;
 
-            // Выделение всей строки
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
-            // Убрать возможность добавлять строки вручную
             dgv.AllowUserToAddRows = false;
             dgv.AllowUserToResizeRows = false;
         }
